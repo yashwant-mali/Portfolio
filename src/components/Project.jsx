@@ -81,7 +81,7 @@ export default function Project() {
             rel="noopener"
             sx={{ ml: 1, fontWeight: 500 }}
           >
-            https://skillsphere.example.com
+            https://skillsphere-frontend-pink.vercel.app/home
           </Link>
         </Typography>
         <Typography
