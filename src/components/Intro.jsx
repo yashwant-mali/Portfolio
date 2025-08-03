@@ -1,6 +1,8 @@
 import React from "react";
 import { Grid, Typography, Box, Avatar } from "@mui/material";
-import portfolioPhoto from "../assets/portfolio_photo.png";
+// import portfolioPhoto from "../assets/portfolio_photo.png";
+import profilePhoto from "../../public/ProfilePhoto.png";
+import Resume from "../../public/resume.pdf";
 
 export default function Intro() {
   return (
@@ -85,7 +87,7 @@ export default function Intro() {
             </Box>
             <Box>
               <a
-                href="src\assets\resume.pdf"
+                href={Resume}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none" }}
@@ -115,7 +117,7 @@ export default function Intro() {
         <Grid item xs={12} md={6} display="flex" justifyContent="center">
           <Box
             component="img"
-            src={portfolioPhoto}
+            src={profilePhoto}
             alt="Yashwant Mali Portfolio"
             sx={{
               width: { xs: 200, md: 320 },

@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Typography, Box, Paper } from "@mui/material";
-import portfolioPhoto from "../assets/portfolio_photo.png";
+// import portfolioPhoto from "../assets/portfolio_photo.png";
+import profilePhoto from "../../public/ProfilePhoto.png";
 
 export default function AboutUs() {
   return (
@@ -28,7 +29,7 @@ export default function AboutUs() {
         >
           <Box
             component="img"
-            src={portfolioPhoto}
+            src={profilePhoto}
             alt="Yashwant Mali Portfolio"
             sx={{
               width: { xs: "100%", sm: 220, md: 320 },
