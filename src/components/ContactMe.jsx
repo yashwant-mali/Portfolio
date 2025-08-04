@@ -103,7 +103,7 @@ export default function ContactMe() {
             <IconButton
               aria-label="Twitter"
               component="a"
-              href="https://twitter.com/yashwantmali"
+              href="https://twitter.com/Yashwant_Mali27"
               target="_blank"
               rel="noopener"
               sx={{ color: "#90caf9" }}
