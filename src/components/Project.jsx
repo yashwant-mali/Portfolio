@@ -76,7 +76,7 @@ export default function Project() {
         >
           Website:
           <Link
-            href="https://skillsphere.example.com"
+            href="            https://skillsphere-frontend-pink.vercel.app/home"
             target="_blank"
             rel="noopener"
             sx={{ ml: 1, fontWeight: 500 }}
