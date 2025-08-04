@@ -93,7 +93,7 @@ export default function ContactMe() {
             <IconButton
               aria-label="GitHub"
               component="a"
-              href="https://github.com/Yashwant_Mali27"
+              href="https://github.com/yashwantmali"
               target="_blank"
               rel="noopener"
               sx={{ color: "#90caf9" }}
