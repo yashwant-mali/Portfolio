@@ -1,14 +1,14 @@
 import React from "react";
 import { Box, Typography, Paper, Chip, Stack, Link, Grid } from "@mui/material";
-// import skillsphere1 from "../assets/skillsphere1.png";
-// import skillsphere2 from "../assets/skillsphere2.png";
+import skillsphere1 from "../assets/skillsphere ss 1.png";
+import skillsphere2 from "../assets/skillsphere ss 2.png";
 
 export default function Project() {
   return (
     <Box
       sx={{
-        py: { xs: 4, md: 8 },
-        px: { xs: 2, md: 8 },
+        py: { xs: 2, md: 6 },
+        px: { xs: 1, sm: 2, md: 8 },
         background: "#f8fafc",
         minHeight: "60vh",
       }}
@@ -22,6 +22,7 @@ export default function Project() {
           fontFamily: "Montserrat, sans-serif",
           textAlign: "center",
           letterSpacing: ".05em",
+          fontSize: { xs: "1.8rem", md: "2.5rem" },
         }}
       >
         Project
@@ -32,120 +33,157 @@ export default function Project() {
           p: { xs: 2, md: 4 },
           borderRadius: 3,
           background: "#fff",
-          maxWidth: 900,
+          maxWidth: 1500,
+          width: "100%",
           margin: "0 auto",
+          boxSizing: "border-box",
         }}
       >
-        <Typography
-          variant="h5"
-          sx={{
-            fontWeight: 700,
-            color: "#222",
-            fontFamily: "Montserrat, sans-serif",
-            mb: 1,
-          }}
+        <Grid
+          container
+          spacing={{ xs: 2, md: 8 }} // Increased gap between sections for desktop
+          alignItems="center"
+          sx={{ flexDirection: { xs: "column", md: "row" } }}
         >
-          Skillsphere
-        </Typography>
-        <Stack direction="row" spacing={1} sx={{ mb: 2, flexWrap: "wrap" }}>
-          <Chip label="React.js" color="primary" />
-          <Chip label="Node.js" color="success" />
-          <Chip label="MySQL" color="info" />
-          <Chip label="Frontend" variant="outlined" />
-          <Chip label="Backend" variant="outlined" />
-        </Stack>
-        <Typography
-          variant="body1"
-          sx={{
-            color: "#333",
-            fontFamily: "Montserrat, sans-serif",
-            lineHeight: 1.7,
-            mb: 2,
-          }}
-        >
-          Skillsphere is a comprehensive platform designed to help users track,
-          showcase, and improve their professional skills. The application
-          allows users to create profiles, add and categorize their skills, set
-          learning goals, and monitor progress over time. It features a modern,
-          intuitive interface and supports collaboration, endorsements, and
-          analytics for personal growth.
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          sx={{ color: "#1976d2", fontWeight: 600, mb: 1 }}
-        >
-          Website:
-          <Link
-            href="            https://skillsphere-frontend-pink.vercel.app/home"
-            target="_blank"
-            rel="noopener"
-            sx={{ ml: 1, fontWeight: 500 }}
+          {/* LEFT: Photos */}
+          <Grid item xs={12} md={6}>
+            <Grid
+              container
+              spacing={2}
+              direction={{ xs: "row", md: "column" }}
+              alignItems="center"
+              justifyContent="center"
+              sx={{ width: "100%" }}
+            >
+              <Grid item xs={6} md={12}>
+                <Box
+                  component="img"
+                  src={skillsphere1}
+                  alt="Skillsphere Screenshot 1"
+                  sx={{
+                    width: "100%",
+                    maxWidth: 400,
+                    height: { xs: 120, sm: 160, md: 250 },
+                    objectFit: "cover",
+                    borderRadius: 2,
+                    boxShadow: 1,
+                    display: "block",
+                    mx: "auto",
+                  }}
+                />
+              </Grid>
+              <Grid item xs={6} md={12}>
+                <Box
+                  component="img"
+                  src={skillsphere2}
+                  alt="Skillsphere Screenshot 2"
+                  sx={{
+                    width: "100%",
+                    maxWidth: 400,
+                    height: { xs: 120, sm: 160, md: 250 },
+                    objectFit: "cover",
+                    borderRadius: 2,
+                    boxShadow: 1,
+                    display: "block",
+                    mx: "auto",
+                    mt: { md: 2 },
+                  }}
+                />
+              </Grid>
+            </Grid>
+          </Grid>
+          {/* RIGHT: Info */}
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              pl: { xs: 0, md: 2 }, // Adds more space on desktop between the two sections
+            }}
           >
-            https://skillsphere-frontend-pink.vercel.app/home
-          </Link>
-        </Typography>
-        <Typography
-          variant="subtitle2"
-          sx={{ color: "#444", fontWeight: 600, mb: 1 }}
-        >
-          Screenshots:
-        </Typography>
-        <Grid container spacing={2} sx={{ mb: 1 }}>
-          {/* Uncomment and add your screenshots in assets folder */}
-          {/*           
-          <Grid item xs={12} sm={6}>
-            <Box
-              component="img"
-              src={skillsphere1}
-              alt="Skillsphere Screenshot 1"
-              sx={{ width: '100%', borderRadius: 2, boxShadow: 1 }}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Box
-              component="img"
-              src={skillsphere2}
-              alt="Skillsphere Screenshot 2"
-              sx={{ width: '100%', borderRadius: 2, boxShadow: 1 }}
-            />
-          </Grid>
-          */}
-          <Grid item xs={12} sm={6}>
             <Box
               sx={{
-                width: "100%",
-                height: 180,
-                background: "#e3e8ef",
-                borderRadius: 2,
                 display: "flex",
-                alignItems: "center",
+                flexDirection: "column",
+                height: "100%",
                 justifyContent: "center",
-                color: "#888",
-                fontFamily: "Montserrat, sans-serif",
-                fontSize: 18,
-                fontWeight: 500,
+                px: { xs: 0, md: 2 },
+                width: "100%",
+                maxWidth: { xs: "90%", md: 800 }, // <--- Adjust this to control width
+                mx: { xs: "auto", md: 0 },
               }}
             >
-              Screenshot 1
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Box
-              sx={{
-                width: "100%",
-                height: 180,
-                background: "#e3e8ef",
-                borderRadius: 2,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#888",
-                fontFamily: "Montserrat, sans-serif",
-                fontSize: 18,
-                fontWeight: 500,
-              }}
-            >
-              Screenshot 2
+              <Typography
+                variant="h5"
+                sx={{
+                  fontWeight: 700,
+                  color: "#222",
+                  fontFamily: "Montserrat, sans-serif",
+                  mb: 1,
+                  textAlign: { xs: "center", md: "left" },
+                }}
+              >
+                Skillsphere
+              </Typography>
+              <Stack
+                direction="row"
+                spacing={1}
+                sx={{
+                  mb: 2,
+                  flexWrap: "wrap",
+                  justifyContent: { xs: "center", md: "flex-start" },
+                }}
+              >
+                <Chip label="React.js" color="primary" />
+                <Chip label="Node.js" color="success" />
+                <Chip label="MySQL" color="info" />
+                <Chip label="Redux" variant="outlined" />
+                <Chip label="MUI" variant="outlined" />
+              </Stack>
+              <Typography
+                variant="body1"
+                sx={{
+                  color: "#333",
+                  fontFamily: "Montserrat, sans-serif",
+                  lineHeight: 1.7,
+                  mb: 2,
+                  textAlign: { xs: "center", md: "left" },
+                  fontSize: { xs: "0.95rem", md: "1rem" },
+                }}
+              >
+                This application is an innovative skill-booking platform
+                designed to empower learners to book lessons in any skill—from
+                music to programming, art to language—directly from institutes
+                or individual teachers. Users can browse a diverse catalog of
+                skills, compare different instructors and institutions based on
+                their ratings, reviews, and fees, and select the option that
+                best suits their learning needs and budget. The platform
+                features a streamlined booking process, transparent pricing, and
+                authentic rating/review systems to ensure trust and quality.
+                Whether you’re looking to learn a new hobby, upskill for your
+                career, or find the perfect teacher or institute, this
+                application makes skill discovery and booking easy, reliable,
+                and tailored to your goals.
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  color: "#1976d2",
+                  fontWeight: 600,
+                  mb: 1,
+                  textAlign: { xs: "center", md: "left" },
+                }}
+              >
+                Website:
+                <Link
+                  href="https://skillsphere-frontend-pink.vercel.app/home"
+                  target="_blank"
+                  rel="noopener"
+                  sx={{ ml: 1, fontWeight: 500, wordBreak: "break-all" }}
+                >
+                  https://skillsphere-frontend-pink.vercel.app/home
+                </Link>
+              </Typography>
             </Box>
           </Grid>
         </Grid>

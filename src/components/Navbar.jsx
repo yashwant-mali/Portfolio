@@ -12,8 +12,8 @@ import MenuItem from "@mui/material/MenuItem";
 
 const pages = [
   { label: "HOME", href: "#home" },
-  { label: "ABOUTUS", href: "#aboutus" },
-  { label: "PROJECTS", href: "#projects" },
+  { label: "ABOUT ME", href: "#aboutme" },
+  { label: "PROJECT", href: "#project" },
   { label: "CONTACT", href: "#contact" },
 ];
 

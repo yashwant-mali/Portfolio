@@ -30,11 +30,16 @@ export default function ContactMe() {
     >
       <Stack
         direction={{ xs: "column", md: "row" }}
-        spacing={4}
+        spacing={{ xs: 4, md: 0 }}
         justifyContent="space-between"
-        alignItems="center"
+        alignItems={{ xs: "center", md: "flex-start" }}
       >
-        <Box>
+        <Box
+          sx={{
+            width: { xs: "100%", md: "auto" },
+            textAlign: { xs: "center", md: "left" },
+          }}
+        >
           <Typography
             variant="h6"
             sx={{
@@ -45,7 +50,13 @@ export default function ContactMe() {
           >
             Contact Me
           </Typography>
-          <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 1 }}>
+          <Stack
+            direction="row"
+            spacing={1}
+            alignItems="center"
+            justifyContent={{ xs: "center", md: "flex-start" }}
+            sx={{ mb: 1 }}
+          >
             <EmailIcon sx={{ color: "#90caf9" }} />
             <Link
               href="mailto:yashwant.mali@email.com"
@@ -56,7 +67,12 @@ export default function ContactMe() {
               yashwantmali555@gmail.com
             </Link>
           </Stack>
-          <Stack direction="row" spacing={2} alignItems="center">
+          <Stack
+            direction="row"
+            spacing={1}
+            alignItems="center"
+            justifyContent={{ xs: "center", md: "flex-start" }}
+          >
             <PhoneIcon sx={{ color: "#90caf9" }} />
             <Typography variant="body1" sx={{ fontWeight: 500 }}>
               +91 8698922567
@@ -66,9 +82,18 @@ export default function ContactMe() {
         <Divider
           orientation="vertical"
           flexItem
-          sx={{ display: { xs: "none", md: "block" }, borderColor: "#444" }}
+          sx={{
+            display: { xs: "none", md: "block" },
+            borderColor: "#444",
+            mx: 3,
+          }}
         />
-        <Box>
+        <Box
+          sx={{
+            width: { xs: "100%", md: "auto" },
+            textAlign: { xs: "center", md: "left" },
+          }}
+        >
           <Typography
             variant="h6"
             sx={{
@@ -79,7 +104,11 @@ export default function ContactMe() {
           >
             Connect with me
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Stack
+            direction="row"
+            spacing={2}
+            justifyContent={{ xs: "center", md: "flex-start" }}
+          >
             <IconButton
               aria-label="LinkedIn"
               component="a"
@@ -113,7 +142,9 @@ export default function ContactMe() {
           </Stack>
         </Box>
       </Stack>
+
       <Divider sx={{ my: 3, borderColor: "#444" }} />
+
       <Typography
         variant="body2"
         align="center"

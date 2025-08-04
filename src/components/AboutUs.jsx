@@ -1,65 +1,53 @@
 import React from "react";
 import { Grid, Typography, Box, Paper } from "@mui/material";
-// import portfolioPhoto from "../assets/portfolio_photo.png";
-import profilePhoto from "../../public/ProfilePhoto.png";
+import introSectionImage from "../../public/intro_section_image.png";
 
 export default function AboutUs() {
   return (
     <Box
-      sx={{ py: { xs: 4, md: 8 }, px: { xs: 2, md: 8 }, background: "#f7f8fa" }}
+      sx={{
+        py: { xs: 4, md: 8 },
+        px: { xs: 1, sm: 2, md: 4 },
+        background: "#f7f8fa",
+        width: "100%",
+        maxWidth: "1500px",
+        margin: "0 auto",
+        boxSizing: "border-box",
+      }}
     >
       <Grid
         container
-        spacing={4}
-        alignItems="stretch"
-        wrap="nowrap"
-        sx={{ flexDirection: { xs: "column", md: "row" } }}
+        spacing={6}
+        alignItems="center"
+        justifyContent="center"
+        sx={{
+          flexDirection: { xs: "column", md: "row" },
+        }}
       >
+        {/* Left Section: Content */}
         <Grid
           item
           xs={12}
           md={6}
           sx={{
-            width: { md: "50%" },
-            minWidth: 0,
             display: "flex",
-            justifyContent: { xs: "center", md: "flex-center" },
-            alignItems: "center",
-          }}
-        >
-          <Box
-            component="img"
-            src={profilePhoto}
-            alt="Yashwant Mali Portfolio"
-            sx={{
-              width: { xs: "100%", sm: 220, md: 320 },
-              height: { xs: 180, sm: 260, md: 400 },
-              objectFit: "cover",
-              maxWidth: "100%",
-              m: 0,
-              p: { xs: 0, md: 0, lg: 0 },
-              pl: { md: 0, lg: 2 },
-              display: "block",
-              borderRadius: 4,
-              boxShadow: 2,
-            }}
-          />
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{
-            width: { md: "50%" },
-            minWidth: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: { xs: "center", md: "flex-start" },
+            flexDirection: "row",
+            justifyContent: "right",
+            alignItems: "flex-start",
+            pr: { md: 4 },
+            width: "40%",
+            height: "100%",
           }}
         >
           <Paper
             elevation={0}
-            sx={{ background: "transparent", p: 0, width: "100%" }}
+            sx={{
+              background: "transparent",
+              p: 0,
+              width: "100%",
+              maxWidth: 500,
+              boxSizing: "border-box",
+            }}
           >
             <Typography
               variant="h4"
@@ -68,6 +56,8 @@ export default function AboutUs() {
                 mb: 2,
                 color: "#1976d2",
                 fontFamily: "Montserrat, sans-serif",
+                textAlign: { xs: "center", md: "left" },
+                letterSpacing: ".04em",
               }}
             >
               About Me
@@ -75,10 +65,11 @@ export default function AboutUs() {
             <Typography
               variant="body1"
               sx={{
-                fontSize: { xs: "1.1rem", md: "1.2rem" },
+                fontSize: { xs: "1rem", sm: "1.12rem", md: "1.2rem" },
                 color: "#333",
                 fontFamily: "Montserrat, sans-serif",
                 lineHeight: 1.7,
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               I am Yashwant Mali, a React.js developer with 3 years of
@@ -88,6 +79,36 @@ export default function AboutUs() {
               deliver great products.
             </Typography>
           </Paper>
+        </Grid>
+
+        {/* Right Section: Image */}
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            display: "flex",
+            justifyContent: { xs: "top", md: "flex-start" },
+            alignItems: "left",
+            pl: { md: 4 },
+            width: "40%",
+            height: "100%",
+          }}
+        >
+          <Box
+            component="img"
+            src={introSectionImage}
+            alt="Intro Section Visual"
+            sx={{
+              width: { xs: "90%", sm: "80%", md: "100%" },
+              maxWidth: 380,
+              height: "auto",
+              objectFit: "cover",
+              borderRadius: 4,
+              boxShadow: 2,
+              display: "block",
+            }}
+          />
         </Grid>
       </Grid>
     </Box>
