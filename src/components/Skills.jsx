@@ -64,6 +64,7 @@ export default function Skills() {
           sx={{
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
             padding: isMobile ? "8px 14px" : "10px 22px",
             backgroundColor: "#d8d4d4ff",
             borderRadius: 2,
@@ -72,12 +73,23 @@ export default function Skills() {
             fontSize: isMobile ? "0.95rem" : "1.1rem",
             boxShadow: "0 1px 4px 0 rgba(107, 15, 107, 0.04)",
             textAlign: "center",
-            minWidth: isMobile ? 70 : 90,
-            whiteSpace: "nowrap",
+            width: "fit-content", // auto-size to content
+            flexShrink: 0, // don’t shrink in scroll mode
+            maxWidth: 150, // optional safeguard for very long text
+            overflow: "hidden",
+            textOverflow: "ellipsis", // truncate instead of breaking layout
           }}
         >
-          <Box sx={{ mr: 1, fontSize: "1.5rem" }}>{skill.icon}</Box>
-          <Typography component="span" sx={{ fontSize: "inherit" }}>
+          <Box sx={{ mr: 1, fontSize: "1.5rem", flexShrink: 0 }}>
+            {skill.icon}
+          </Box>
+          <Typography
+            component="span"
+            sx={{
+              fontSize: "inherit",
+              whiteSpace: "nowrap", // keep names in one line inside the chip
+            }}
+          >
             {skill.name}
           </Typography>
         </Box>

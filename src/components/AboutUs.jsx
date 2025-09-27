@@ -32,10 +32,9 @@ export default function AboutUs() {
           sx={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "right",
+            justifyContent: { xs: "center", md: "flex-end" },
             alignItems: "flex-start",
-            pr: { md: 4 },
-            width: "40%",
+            pr: { xs: 2, md: 4 },
             height: "100%",
           }}
         >
@@ -43,7 +42,7 @@ export default function AboutUs() {
             elevation={0}
             sx={{
               background: "transparent",
-              p: 0,
+              p: { xs: 2, sm: 3, md: 0 },
               width: "100%",
               maxWidth: 500,
               boxSizing: "border-box",
@@ -58,6 +57,7 @@ export default function AboutUs() {
                 fontFamily: "Montserrat, sans-serif",
                 textAlign: { xs: "center", md: "left" },
                 letterSpacing: ".04em",
+                fontSize: { xs: "1.75rem", sm: "2rem", md: "2.25rem" },
               }}
             >
               About Me
@@ -65,7 +65,7 @@ export default function AboutUs() {
             <Typography
               variant="body1"
               sx={{
-                fontSize: { xs: "1rem", sm: "1.12rem", md: "1.2rem" },
+                fontSize: { xs: "0.95rem", sm: "1.05rem", md: "1.2rem" },
                 color: "#333",
                 fontFamily: "Montserrat, sans-serif",
                 lineHeight: 1.7,
@@ -74,9 +74,9 @@ export default function AboutUs() {
             >
               I am Yashwant Mali, a React.js developer with 3 years of
               experience. I love building modern, user-friendly web apps and
-              enjoy solving real-world problems with clean code. I am passionate
-              about learning new technologies and collaborating with others to
-              deliver great products.
+              enjoy solving real-world problems with clean and optimized code. I
+              am passionate about learning new technologies and collaborating
+              with others to deliver great products.
             </Typography>
           </Paper>
         </Grid>
