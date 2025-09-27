@@ -43,7 +43,7 @@ export default function Intro() {
             sx={{
               fontFamily: "Montserrat, sans-serif",
               fontWeight: 100,
-              color: "#222",
+              color: "#222 bold",
               letterSpacing: ".05px",
               mb: 2,
               fontSize: { xs: "2rem", sm: "2.3rem", md: "2.8rem" },
