@@ -35,7 +35,7 @@ export default function Experience() {
           justifyContent: "center",
         }}
       >
-        {/* First Card */}
+        {/* First Card - homedepot*/}
         <Grid
           item
           xs={12}
@@ -134,7 +134,7 @@ export default function Experience() {
             </Box>
           </Paper>
         </Grid>
-        {/* Second Card */}
+        {/* Second Card - gap*/}
         <Grid
           item
           xs={12}
