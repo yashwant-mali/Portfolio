@@ -5,6 +5,7 @@ import introSectionImage from "../../public/intro_section_image.png";
 export default function AboutUs() {
   return (
     <Box
+      id="aboutme"
       sx={{
         py: { xs: 4, md: 8 },
         px: { xs: 1, sm: 2, md: 4 },

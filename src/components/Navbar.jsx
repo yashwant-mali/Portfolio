@@ -11,10 +11,12 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
 const pages = [
-  { label: "HOME", href: "#home" },
+  { label: "HOME", href: "#intro" },
   { label: "ABOUT ME", href: "#aboutme" },
   { label: "PROJECT", href: "#project" },
   { label: "CONTACT", href: "#contact" },
+  { label: "SKILLS", href: "#skills" },
+  { label: "EXPERIENCE", href: "#experience" },
 ];
 
 export default function Navbar() {
@@ -28,6 +30,19 @@ export default function Navbar() {
     setAnchorElNav(null);
   };
 
+  // 👇 Smooth Scroll Function
+  const handleScroll = (event, href) => {
+    event.preventDefault();
+    const id = href.replace("#", "");
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+
+    handleCloseNavMenu();
+  };
+
   return (
     <AppBar
       position="static"
@@ -39,6 +54,7 @@ export default function Navbar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          {/* Logo (Desktop) */}
           <Typography
             variant="h5"
             noWrap
@@ -57,6 +73,8 @@ export default function Navbar() {
           >
             Yashwant Mali
           </Typography>
+
+          {/* Mobile Menu */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -81,9 +99,7 @@ export default function Navbar() {
               {pages.map((page) => (
                 <MenuItem
                   key={page.label}
-                  onClick={handleCloseNavMenu}
-                  component="a"
-                  href={page.href}
+                  onClick={(e) => handleScroll(e, page.href)}
                   sx={{
                     color: "#222",
                     fontWeight: 600,
@@ -99,6 +115,8 @@ export default function Navbar() {
               ))}
             </Menu>
           </Box>
+
+          {/* Logo (Mobile) */}
           <Typography
             variant="h6"
             noWrap
@@ -117,6 +135,8 @@ export default function Navbar() {
           >
             Yashwant Mali
           </Typography>
+
+          {/* Desktop Links */}
           <Box
             sx={{
               flexGrow: 1,
@@ -127,7 +147,7 @@ export default function Navbar() {
             {pages.map((page) => (
               <Button
                 key={page.label}
-                href={page.href}
+                onClick={(e) => handleScroll(e, page.href)}
                 sx={{
                   my: 2,
                   color: "#222",

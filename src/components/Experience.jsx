@@ -4,6 +4,7 @@ import { Box, Grid, Typography, Paper, Divider } from "@mui/material";
 export default function Experience() {
   return (
     <Box
+      id="Experience"
       sx={{
         py: { xs: 2, md: 4 },
         px: { xs: 1, sm: 2, md: 6 },

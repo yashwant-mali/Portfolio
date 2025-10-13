@@ -9,6 +9,7 @@ export default function Intro() {
 
   return (
     <Box
+      id="intro"
       sx={{
         flexGrow: 1,
         py: { xs: 2, md: 4 },

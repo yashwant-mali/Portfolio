@@ -16,6 +16,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 export default function ContactMe() {
   return (
     <Box
+      id="contact"
       component="footer"
       sx={{
         background: "#22223b",

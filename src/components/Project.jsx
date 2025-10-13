@@ -6,6 +6,7 @@ import skillsphere2 from "../assets/skillsphere ss 2.png";
 export default function Project() {
   return (
     <Box
+      id="project"
       sx={{
         py: { xs: 2, md: 6 },
         px: { xs: 1, sm: 2, md: 8 },

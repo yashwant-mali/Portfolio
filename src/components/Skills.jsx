@@ -36,6 +36,7 @@ export default function Skills() {
 
   return (
     <Box
+      id="skills"
       sx={{
         display: "flex",
         flexWrap: isMobile ? "nowrap" : "wrap",
