@@ -99,7 +99,7 @@ export default function Experience() {
                 mb: 1,
               }}
             >
-              Profile: System Engineer (FrontEnd React.js Developer)
+              Profile: Senior System Engineer (FrontEnd React.js Developer)
             </Typography>
             <Divider sx={{ my: 1.5 }} />
             <Box
@@ -198,7 +198,7 @@ export default function Experience() {
                 mb: 1,
               }}
             >
-              Profile: Senior System Engineer (FrontEnd React.js Developer)
+              Profile: System Engineer (FrontEnd React.js Developer)
             </Typography>
             <Divider sx={{ my: 1.5 }} />
             <Box
