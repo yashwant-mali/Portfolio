@@ -88,7 +88,7 @@ export default function Experience() {
                 mb: 1,
               }}
             >
-              Period: Nov 2023 – Present
+              Period: Mar 2024 – Present
             </Typography>
             <Typography
               variant="subtitle2"
@@ -187,7 +187,7 @@ export default function Experience() {
                 mb: 1,
               }}
             >
-              Period: Aug 2022 – Nov 2023
+              Period: Aug 2022 – Mar 2024
             </Typography>
             <Typography
               variant="subtitle2"
