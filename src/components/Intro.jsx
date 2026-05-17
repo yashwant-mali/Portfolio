@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Typography, Box, useTheme, useMediaQuery } from "@mui/material";
 import profilePhoto from "../../public/ProfilePhoto.png";
-import Resume from "../../public/resume.pdf";
+import Resume from "../../public/Resume.pdf";
 
 export default function Intro() {
   const theme = useTheme();
