@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  @apply bg-ink-950 text-mist-100 font-sans antialiased;
+  background-image:
+    radial-gradient(ellipse 900px 520px at 12% -10%, rgba(124, 140, 255, 0.16), transparent 60%),
+    radial-gradient(ellipse 800px 520px at 100% 0%, rgba(63, 224, 197, 0.10), transparent 55%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: #7c8cff;
+  color: #05070d;
+}
+
+:focus-visible {
+  outline: 2px solid #7c8cff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #05070d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1b2337;
+  border-radius: 8px;
+  border: 2px solid #05070d;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #26304a;
+}
+
+@layer components {
+  .section-wrap {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-brand-light;
+  }
+
+  .section-title {
+    @apply font-display text-2xl sm:text-3xl font-semibold text-mist-100 tracking-tight;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-ink-600 bg-ink-850/60 px-3 py-1 text-xs text-mist-300;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-brand to-aqua px-5 py-2.5 text-sm font-semibold text-ink-950 shadow-glow transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-ink-600 bg-ink-850/50 px-5 py-2.5 text-sm font-semibold text-mist-100 backdrop-blur transition-all duration-200 hover:-translate-y-0.5 hover:border-brand/60 hover:text-white active:translate-y-0;
+  }
+
+  .card {
+    @apply rounded-2xl border border-ink-700 bg-ink-850/60 backdrop-blur-sm shadow-card;
+  }
+}
