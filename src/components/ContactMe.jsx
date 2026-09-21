@@ -76,7 +76,7 @@ export default function ContactMe() {
           >
             <PhoneIcon sx={{ color: "#90caf9" }} />
             <Typography variant="body1" sx={{ fontWeight: 500 }}>
-              +91 9689922567
+              +91 8698922567
             </Typography>
           </Stack>
         </Box>
