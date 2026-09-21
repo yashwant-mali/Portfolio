@@ -30,14 +30,13 @@ export default function Navbar() {
     setAnchorElNav(null);
   };
 
-  // 👇 Smooth Scroll Function
   const handleScroll = (event, href) => {
     event.preventDefault();
     const id = href.replace("#", "");
     const section = document.getElementById(id);
 
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     handleCloseNavMenu();
@@ -45,44 +44,43 @@ export default function Navbar() {
 
   return (
     <AppBar
-      position="static"
-      elevation={2}
+      position="sticky"
+      elevation={0}
       sx={{
-        background: "#fff",
-        boxShadow: "0 2px 8px 0 rgba(26, 13, 57, 0.04)",
+        background: "#ffffff",
+        borderBottom: "1px solid rgba(148, 163, 184, 0.2)",
+        boxShadow: "0 2px 14px rgba(15, 23, 42, 0.03)",
       }}
     >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          {/* Logo (Desktop) */}
+      <Container maxWidth="xl" sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
+        <Toolbar disableGutters sx={{ minHeight: { xs: 64, md: 72 } }}>
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href="#home"
+            href="#intro"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "Montserrat, sans-serif",
               fontWeight: 800,
-              letterSpacing: ".1rem",
-              color: "#222",
+              letterSpacing: ".08rem",
+              color: "#111827",
               textDecoration: "none",
-              fontSize: "2rem",
+              fontSize: { md: "1.7rem", lg: "2rem" },
             }}
           >
             Yashwant Mali
           </Typography>
 
-          {/* Mobile Menu */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="menu"
+              aria-label="Open navigation menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              sx={{ color: "#222" }}
+              sx={{ color: "#111827", p: 1 }}
             >
               <MenuIcon />
             </IconButton>
@@ -94,20 +92,24 @@ export default function Navbar() {
               transformOrigin={{ vertical: "top", horizontal: "left" }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" } }}
+              sx={{
+                display: { xs: "block", md: "none" },
+                "& .MuiPaper-root": { borderRadius: 2, mt: 1 },
+              }}
             >
               {pages.map((page) => (
                 <MenuItem
                   key={page.label}
                   onClick={(e) => handleScroll(e, page.href)}
                   sx={{
-                    color: "#222",
+                    color: "#1f2937",
                     fontWeight: 600,
                     fontFamily: "Montserrat, sans-serif",
-                    fontSize: "1.05rem",
-                    borderRadius: 2,
+                    fontSize: "0.95rem",
+                    borderRadius: 1.5,
                     mx: 1,
                     my: 0.5,
+                    minWidth: 180,
                   }}
                 >
                   <Typography textAlign="center">{page.label}</Typography>
@@ -116,32 +118,32 @@ export default function Navbar() {
             </Menu>
           </Box>
 
-          {/* Logo (Mobile) */}
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="#home"
+            href="#intro"
             sx={{
               flexGrow: 1,
               display: { xs: "flex", md: "none" },
               fontFamily: "Montserrat, sans-serif",
               fontWeight: 800,
-              letterSpacing: ".1rem",
-              color: "#222",
+              letterSpacing: ".06rem",
+              color: "#111827",
               textDecoration: "none",
-              fontSize: "1.3rem",
+              fontSize: "1.2rem",
             }}
           >
             Yashwant Mali
           </Typography>
 
-          {/* Desktop Links */}
           <Box
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
               justifyContent: "flex-end",
+              alignItems: "center",
+              gap: 0.5,
             }}
           >
             {pages.map((page) => (
@@ -149,19 +151,22 @@ export default function Navbar() {
                 key={page.label}
                 onClick={(e) => handleScroll(e, page.href)}
                 sx={{
-                  my: 2,
-                  color: "#222",
+                  color: "#1f2937",
                   display: "block",
                   fontWeight: 600,
                   fontFamily: "Montserrat, sans-serif",
-                  fontSize: "1rem",
-                  mx: 1.5,
-                  borderRadius: 2,
+                  fontSize: "0.9rem",
+                  letterSpacing: ".03em",
+                  px: 1.5,
+                  py: 0.75,
+                  minWidth: "auto",
+                  borderRadius: 1.5,
                   background: "transparent",
                   boxShadow: "none",
-                  transition: "all 0.2s",
+                  textTransform: "uppercase",
+                  transition: "all 0.2s ease",
                   "&:hover": {
-                    background: "#f5f5f5",
+                    background: "#f5f7fb",
                     color: "#1976d2",
                   },
                 }}

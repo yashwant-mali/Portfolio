@@ -1,53 +1,47 @@
 import React from "react";
-import { Box, Grid, Typography, Paper, Divider } from "@mui/material";
+import { Box, Typography, Paper, Divider } from "@mui/material";
 
 export default function Experience() {
   return (
     <Box
       id="experience"
       sx={{
-        py: { xs: 2, md: 4 },
-        px: { xs: 1, sm: 2, md: 6 },
+        py: { xs: 5, md: 7 },
+        px: { xs: 2, sm: 3, md: 4 },
         background: "#f8fafc",
-        minHeight: { xs: "auto", md: "60vh" },
+        borderTop: "1px solid #e5e7eb",
+        borderBottom: "1px solid #e5e7eb",
       }}
     >
-      <Typography
-        variant="h4"
-        sx={{
-          fontWeight: 800,
-          mb: { xs: 2, md: 4 },
-          color: "#1976d2",
-          fontFamily: "Montserrat, sans-serif",
-          textAlign: "center",
-          letterSpacing: ".05em",
-          fontSize: { xs: "2rem", sm: "2.3rem", md: "2.5rem" },
-        }}
-      >
-        Experience
-      </Typography>
-      <Grid
-        container
-        spacing={3}
-        sx={{
-          flexDirection: { xs: "column", md: "row" },
-          alignItems: "stretch",
-          justifyContent: "center",
-        }}
-      >
-        {/* First Card - homedepot*/}
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{ display: "flex", justifyContent: "center" }}
+      <Box sx={{ maxWidth: 1280, mx: "auto" }}>
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: 800,
+            mb: { xs: 2, md: 4 },
+            color: "#1976d2",
+            fontFamily: "Montserrat, sans-serif",
+            textAlign: "center",
+            letterSpacing: ".05em",
+            fontSize: { xs: "2rem", sm: "2.3rem", md: "2.5rem" },
+          }}
+        >
+          Experience
+        </Typography>
+
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr", md: "repeat(2, minmax(0, 1fr))" },
+            gap: 3,
+            alignItems: "stretch",
+          }}
         >
           <Paper
             elevation={2}
             sx={{
               p: { xs: 2, sm: 3, md: 4 },
               width: "100%",
-              maxWidth: { xs: "100%", md: 600 },
               minHeight: 340,
               display: "flex",
               flexDirection: "column",
@@ -67,7 +61,7 @@ export default function Experience() {
                 fontSize: { xs: "1.25rem", sm: "1.35rem", md: "1.5rem" },
               }}
             >
-              HomeDept
+              Home Depot
             </Typography>
             <Typography
               variant="subtitle1"
@@ -78,7 +72,7 @@ export default function Experience() {
                 mb: 0.5,
               }}
             >
-              Company: Infosys PVT. LTD.
+              Infosys | Pune, India
             </Typography>
             <Typography
               variant="body2"
@@ -88,7 +82,7 @@ export default function Experience() {
                 mb: 1,
               }}
             >
-              Period: Mar 2024 – Present
+              Aug 2024 – Present
             </Typography>
             <Typography
               variant="subtitle2"
@@ -99,7 +93,20 @@ export default function Experience() {
                 mb: 1,
               }}
             >
-              Profile: Senior System Engineer (FrontEnd React.js Developer)
+              Technology Analyst | Frontend Developer
+            </Typography>
+            <Typography
+              variant="caption"
+              sx={{
+                color: "#475569",
+                fontFamily: "Montserrat, sans-serif",
+                mb: 1.5,
+                fontWeight: 600,
+              }}
+            >
+              Environment: React.js, Redux, React Hooks, Custom
+              Hooks,JavaScript, HTML5, CSS3, Tailwind CSS, Jest, GitHub, Jira,
+              Webpack, CI/CD, Core web Vitals, LightHouse and Profiler
             </Typography>
             <Divider sx={{ my: 1.5 }} />
             <Box
@@ -115,38 +122,31 @@ export default function Experience() {
               }}
             >
               <li>
-                Optimized database performance by designing and refining SQL
-                queries, stored procedures, and triggers, leading to a 20%
-                reduction in query response time.
+                Delivered pixel-accurate, responsive React experiences for a
+                high-traffic commerce platform, reducing UI defects by 30% and
+                improving accessibility from 78% to 95+.
               </li>
               <li>
-                Diagnosed and resolved critical database issues, ensuring system
-                uptime and minimizing service disruptions.
+                Improved Core Web Vitals by optimizing bundle size through code
+                splitting, lazy loading, memoization, and API efficiency.
               </li>
               <li>
-                Developed RESTful APIs with Node.js and Express.js, ensuring
-                secure and efficient data flow between frontend and backend
+                Reduced LCP from 4.2s to under 2.5s and improved Lighthouse
+                score to 90+, while enabling 22–30% SEO growth.
               </li>
               <li>
-                Managed source code versioning via Git and GitHub, enabling
-                seamless collaboration and deployment.
+                Built reusable, scalable frontend architecture using React
+                hooks, custom hooks, and component-driven patterns for faster
+                delivery.
               </li>
             </Box>
           </Paper>
-        </Grid>
-        {/* Second Card - gap*/}
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{ display: "flex", justifyContent: "center" }}
-        >
+
           <Paper
             elevation={2}
             sx={{
               p: { xs: 2, sm: 3, md: 4 },
               width: "100%",
-              maxWidth: { xs: "100%", md: 600 },
               minHeight: 340,
               display: "flex",
               flexDirection: "column",
@@ -166,7 +166,7 @@ export default function Experience() {
                 fontSize: { xs: "1.25rem", sm: "1.35rem", md: "1.5rem" },
               }}
             >
-              GAP Impact
+              Gap Impact
             </Typography>
             <Typography
               variant="subtitle1"
@@ -177,7 +177,7 @@ export default function Experience() {
                 mb: 0.5,
               }}
             >
-              Company: Infosys PVT. LTD.
+              Infosys | Pune, India
             </Typography>
             <Typography
               variant="body2"
@@ -187,7 +187,7 @@ export default function Experience() {
                 mb: 1,
               }}
             >
-              Period: Aug 2022 – Mar 2024
+              Aug 2022 – Mar 2024
             </Typography>
             <Typography
               variant="subtitle2"
@@ -198,7 +198,19 @@ export default function Experience() {
                 mb: 1,
               }}
             >
-              Profile: System Engineer (FrontEnd React.js Developer)
+              Frontend Developer
+            </Typography>
+            <Typography
+              variant="caption"
+              sx={{
+                color: "#475569",
+                fontFamily: "Montserrat, sans-serif",
+                mb: 1.5,
+                fontWeight: 600,
+              }}
+            >
+              Environment: React.js, Redux, JavaScript, CSS3, HTML5, Material
+              UI, Node.js, MongoDB, GitHub, Jest, Webpack, Jira
             </Typography>
             <Divider sx={{ my: 1.5 }} />
             <Box
@@ -214,27 +226,28 @@ export default function Experience() {
               }}
             >
               <li>
-                Developed high-performance, responsive React.js applications
-                using Redux for state management, improving user interactions by
-                15%..
+                Developed scalable, reusable React components using modern
+                JavaScript, improving UI consistency and accelerating feature
+                delivery by 20% across multiple modules.
               </li>
               <li>
-                Designed reusable UI components, streamlining development and
-                ensuring consistency across the application.
+                Implemented optimization techniques such as code splitting, lazy
+                loading, memoization, and caching to reduce API usage and
+                improve performance.
               </li>
               <li>
-                Enhanced application reliability by implementing Jest testing,
-                achieving a 30% reduction in production bugs.
+                Improved maintainability with reusable business logic and
+                streamlined state management using Redux.
               </li>
               <li>
-                Improved data visualization by designing interactive, real-time
-                analytics dashboards, providing actionable insights for business
-                users.
+                Increased testing coverage and reliability with Jest while
+                enhancing the user experience through faster, smoother
+                interactions.
               </li>
             </Box>
           </Paper>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 }

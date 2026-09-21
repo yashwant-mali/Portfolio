@@ -11,147 +11,167 @@ export default function Intro() {
     <Box
       id="intro"
       sx={{
-        flexGrow: 1,
-        py: { xs: 2, md: 4 },
-        px: { xs: 1.5, sm: 4, md: 10 },
         background: "#fafbfc",
+        borderBottom: "1px solid #e5e7eb",
+        py: { xs: 5, md: 7 },
+        px: { xs: 2, sm: 3, md: 4 },
       }}
     >
-      <Grid
-        container
-        alignItems="center"
-        justifyContent="center"
-        spacing={4}
-        direction={{ xs: "column-reverse", md: "row" }}
-      >
-        <Grid item xs={12} md={6}>
-          <Typography
-            variant="h3"
-            sx={{
-              fontFamily: "Montserrat, sans-serif",
-              fontWeight: 800,
-              color: "black",
-              letterSpacing: ".05em",
-              mb: 0,
-              fontSize: { xs: "2rem", sm: "2.3rem", md: "2.8rem" },
-              textAlign: { xs: "center", md: "left" },
-            }}
-          >
-            Hello,
-          </Typography>
-          <Typography
-            variant="h1"
-            sx={{
-              fontFamily: "Montserrat, sans-serif",
-              fontWeight: 100,
-              color: "#222 bold",
-              letterSpacing: ".05px",
-              mb: 2,
-              fontSize: { xs: "2rem", sm: "2.3rem", md: "2.8rem" },
-              textAlign: { xs: "center", md: "left" },
-            }}
-          >
-            I'm Yashwant
-          </Typography>
-          <Typography
-            variant="h2"
-            sx={{
-              fontFamily: "Montserrat, sans-serif",
-              fontWeight: 900,
-              color: "purple",
-              letterSpacing: ".08em",
-              fontSize: { xs: "2.2rem", sm: "2.5rem", md: "3.2rem" },
-              textDecoration: "underline",
-              textAlign: { xs: "center", md: "left" },
-              mb: { xs: 2, md: 0 },
-            }}
-          >
-            Software Developer
-          </Typography>
-          <Box
-            sx={{
-              mt: 3,
-              display: "flex",
-              flexDirection: { xs: "column", sm: "row" },
-              alignItems: { xs: "center", sm: "flex-start" },
-              gap: { xs: 1.5, sm: 2 },
-              justifyContent: { xs: "center", md: "flex-start" },
-            }}
-          >
-            <a
-              href="https://skillsphere-frontend-pink.vercel.app/home"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
+      <Box sx={{ maxWidth: 1280, mx: "auto" }}>
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="space-between"
+          spacing={{ xs: 3, md: 5 }}
+          direction={{ xs: "column-reverse", md: "row" }}
+        >
+          <Grid item xs={12} md={6}>
+            <Typography
+              variant="h3"
+              sx={{
+                fontFamily: "Montserrat, sans-serif",
+                fontWeight: 800,
+                color: "#111827",
+                letterSpacing: ".04em",
+                mb: 0.5,
+                fontSize: { xs: "2rem", sm: "2.4rem", md: "3rem" },
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
+              Hello,
+            </Typography>
+            <Typography
+              variant="h1"
+              sx={{
+                fontFamily: "Montserrat, sans-serif",
+                fontWeight: 300,
+                color: "#111827",
+                letterSpacing: ".02em",
+                mb: 1,
+                fontSize: { xs: "2rem", sm: "2.5rem", md: "3.1rem" },
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
+              I&apos;m Yashwant
+            </Typography>
+            <Typography
+              variant="h2"
+              sx={{
+                fontFamily: "Montserrat, sans-serif",
+                fontWeight: 800,
+                color: "#3b82f6",
+                letterSpacing: ".06em",
+                textTransform: "uppercase",
+                fontSize: { xs: "1.8rem", sm: "2.3rem", md: "3rem" },
+                textAlign: { xs: "center", md: "left" },
+                mb: 2,
+              }}
+            >
+              Frontend Engineer
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                color: "#374151",
+                fontFamily: "Montserrat, sans-serif",
+                lineHeight: 1.7,
+                fontSize: { xs: "0.95rem", md: "1.05rem" },
+                textAlign: { xs: "center", md: "left" },
+                maxWidth: 560,
+                mb: 3,
+              }}
+            >
+              Frontend Engineer with 4 years of experience building
+              enterprise-scale applications for high-traffic commerce platforms.
+              I specialize in performance optimization, accessibility, reusable
+              frontend architecture, and delivering reliable user experiences.
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", sm: "row" },
+                alignItems: { xs: "stretch", sm: "center" },
+                gap: { xs: 1.5, sm: 2 },
+                justifyContent: { xs: "center", md: "flex-start" },
+                width: { xs: "100%", sm: "auto" },
+              }}
             >
               <button
+                type="button"
+                onClick={() => {
+                  const projectSection = document.getElementById("project");
+                  if (projectSection) {
+                    projectSection.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+                }}
                 style={{
                   background: "#1976d2",
                   color: "#fff",
                   border: "none",
-                  borderRadius: 6,
-                  padding: "10px 28px",
+                  borderRadius: 8,
+                  padding: "12px 24px",
                   fontWeight: 700,
-                  fontSize: "1rem",
+                  fontSize: "0.96rem",
                   fontFamily: "Montserrat, sans-serif",
                   cursor: "pointer",
-                  boxShadow: "0 2px 8px 0 rgba(25, 118, 210, 0.08)",
-                  transition: "background 0.2s",
-                  width: isMobile ? "90vw" : "inherit",
-                  maxWidth: 320,
+                  boxShadow: "0 2px 8px 0 rgba(25, 118, 210, 0.12)",
+                  width: isMobile ? "100%" : "auto",
+                  minWidth: 180,
                 }}
               >
-                My Project
+                My Projects
               </button>
-            </a>
-            <a
-              href={Resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <button
-                style={{
-                  background: "#fff",
-                  color: "#1976d2",
-                  border: "2px solid #1976d2",
-                  borderRadius: 6,
-                  padding: "10px 28px",
-                  fontWeight: 700,
-                  fontSize: "1rem",
-                  fontFamily: "Montserrat, sans-serif",
-                  cursor: "pointer",
-                  boxShadow: "0 2px 8px 0 rgba(25, 118, 210, 0.08)",
-                  transition: "background 0.2s",
-                  width: isMobile ? "90vw" : "inherit",
-                  maxWidth: 320,
-                }}
+              <a
+                href={Resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
               >
-                Resume
-              </button>
-            </a>
-          </Box>
-        </Grid>
+                <button
+                  type="button"
+                  style={{
+                    background: "#fff",
+                    color: "#1976d2",
+                    border: "2px solid #1976d2",
+                    borderRadius: 8,
+                    padding: "11px 24px",
+                    fontWeight: 700,
+                    fontSize: "0.96rem",
+                    fontFamily: "Montserrat, sans-serif",
+                    cursor: "pointer",
+                    boxShadow: "0 2px 8px 0 rgba(25, 118, 210, 0.08)",
+                    width: isMobile ? "100%" : "auto",
+                    minWidth: 180,
+                  }}
+                >
+                  Resume
+                </button>
+              </a>
+            </Box>
+          </Grid>
 
-        <Grid item xs={12} md={6} display="flex" justifyContent="center">
-          <Box
-            component="img"
-            src={profilePhoto}
-            alt="Yashwant Mali Portfolio"
-            sx={{
-              width: { xs: 170, sm: 200, md: 320 },
-              height: { xs: 190, sm: 260, md: 400 },
-              objectFit: "cover",
-              borderRadius: 3,
-              boxShadow: "0 2px 18px 0 rgba(25,130,220,0.08)",
-              maxWidth: "96vw",
-              display: "block",
-              mx: { xs: "auto", md: 0 },
-              mb: { xs: 2, md: 0 },
-            }}
-          />
+          <Grid item xs={12} md={5.5} display="flex" justifyContent="center">
+            <Box
+              component="img"
+              src={profilePhoto}
+              alt="Yashwant Mali Portfolio"
+              sx={{
+                width: { xs: 220, sm: 260, md: 310 },
+                height: { xs: 240, sm: 300, md: 360 },
+                objectFit: "cover",
+                borderRadius: 3,
+                boxShadow: "0 18px 40px rgba(15, 23, 42, 0.08)",
+                display: "block",
+                mx: { xs: "auto", md: 0 },
+                mb: { xs: 1, md: 0 },
+              }}
+            />
+          </Grid>
         </Grid>
-      </Grid>
+      </Box>
     </Box>
   );
 }

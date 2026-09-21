@@ -2,6 +2,7 @@ import React from "react";
 import { Box, useMediaQuery, useTheme, Typography } from "@mui/material";
 import JavaScriptIcon from "@mui/icons-material/Javascript";
 import ReactIcon from "@mui/icons-material/Code";
+import CodeIcon from "@mui/icons-material/Code";
 import NodeJsIcon from "@mui/icons-material/Adb";
 import StorageIcon from "@mui/icons-material/Storage";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
@@ -11,23 +12,51 @@ import CssIcon from "@mui/icons-material/Css";
 import BootstrapIcon from "@mui/icons-material/Web";
 import MaterialUiIcon from "@mui/icons-material/Dock";
 import TailwindIcon from "@mui/icons-material/BlurOn";
+import SpeedIcon from "@mui/icons-material/Speed";
+import InsightsIcon from "@mui/icons-material/Insights";
+import TimelineIcon from "@mui/icons-material/Timeline";
 import GitIcon from "@mui/icons-material/Merge";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import SecurityIcon from "@mui/icons-material/Security";
 
 const skillData = [
-  { name: "Javascript", icon: <JavaScriptIcon sx={{ color: "#f0db4f" }} /> },
-  { name: "React", icon: <ReactIcon sx={{ color: "#61dafb" }} /> },
-  { name: "NodeJS", icon: <NodeJsIcon sx={{ color: "#3c873a" }} /> },
-  { name: "Express", icon: <AccountTreeIcon sx={{ color: "#444" }} /> },
+  { name: "React.js", icon: <ReactIcon sx={{ color: "#61dafb" }} /> },
+  { name: "Next.js", icon: <AccountTreeIcon sx={{ color: "#111827" }} /> },
+  { name: "JavaScript", icon: <JavaScriptIcon sx={{ color: "#f0db4f" }} /> },
+  { name: "Redux", icon: <AccountTreeIcon sx={{ color: "#764abc" }} /> },
+  {
+    name: "Redux Toolkit",
+    icon: <AccountTreeIcon sx={{ color: "#7248b6" }} />,
+  },
+  { name: "Node.js", icon: <NodeJsIcon sx={{ color: "#3c873a" }} /> },
+  { name: "Express.js", icon: <AccountTreeIcon sx={{ color: "#444" }} /> },
   { name: "MongoDB", icon: <StorageIcon sx={{ color: "#47a248" }} /> },
-  { name: "Mysql", icon: <SqlIcon sx={{ color: "#00758f" }} /> },
+  { name: "MySQL", icon: <SqlIcon sx={{ color: "#00758f" }} /> },
   { name: "HTML5", icon: <HtmlIcon sx={{ color: "#e34c26" }} /> },
   { name: "CSS3", icon: <CssIcon sx={{ color: "#264de4" }} /> },
+  { name: "Tailwind CSS", icon: <TailwindIcon sx={{ color: "#06b6d4" }} /> },
   { name: "Bootstrap", icon: <BootstrapIcon sx={{ color: "#563d7c" }} /> },
-  { name: "MaterialUI", icon: <MaterialUiIcon sx={{ color: "#1976d2" }} /> },
-  { name: "TailwindCSS", icon: <TailwindIcon sx={{ color: "#06b6d4" }} /> },
+  { name: "Material UI", icon: <MaterialUiIcon sx={{ color: "#1976d2" }} /> },
+  { name: "Jest", icon: <CodeIcon sx={{ color: "#c21325" }} /> },
+  { name: "RTL", icon: <CodeIcon sx={{ color: "#f59e0b" }} /> },
   { name: "Git", icon: <GitIcon sx={{ color: "#f1502f" }} /> },
   { name: "GitHub", icon: <GitHubIcon sx={{ color: "#333" }} /> },
+  { name: "JWT", icon: <SecurityIcon sx={{ color: "#f5b301" }} /> },
+  { name: "Jira", icon: <AccountTreeIcon sx={{ color: "#0052cc" }} /> },
+  { name: "Webpack", icon: <CodeIcon sx={{ color: "#8ed0fa" }} /> },
+  { name: "CI/CD", icon: <AccountTreeIcon sx={{ color: "#0f766e" }} /> },
+  {
+    name: "Core web vitals",
+    icon: <SpeedIcon sx={{ color: "#fc8f12" }} />,
+  },
+  {
+    name: "LightHouse",
+    icon: <InsightsIcon sx={{ color: "#3710c2" }} />,
+  },
+  {
+    name: "Profiler",
+    icon: <TimelineIcon sx={{ color: "#5b5881" }} />,
+  },
 ];
 
 export default function Skills() {
@@ -46,6 +75,8 @@ export default function Skills() {
         justifyContent: { xs: "flex-start", md: "center" },
         alignItems: "center",
         backgroundColor: "#f5f5f5",
+        borderTop: "1px solid #e5e7eb",
+        borderBottom: "1px solid #e5e7eb",
         maxWidth: 1600,
         margin: "10px auto",
         borderRadius: 2.5,
@@ -74,11 +105,11 @@ export default function Skills() {
             fontSize: isMobile ? "0.95rem" : "1.1rem",
             boxShadow: "0 1px 4px 0 rgba(107, 15, 107, 0.04)",
             textAlign: "center",
-            width: "fit-content", // auto-size to content
-            flexShrink: 0, // don’t shrink in scroll mode
-            maxWidth: 150, // optional safeguard for very long text
+            width: "fit-content",
+            flexShrink: 0,
+            maxWidth: 180,
             overflow: "hidden",
-            textOverflow: "ellipsis", // truncate instead of breaking layout
+            textOverflow: "ellipsis",
           }}
         >
           <Box sx={{ mr: 1, fontSize: "1.5rem", flexShrink: 0 }}>
@@ -88,7 +119,7 @@ export default function Skills() {
             component="span"
             sx={{
               fontSize: "inherit",
-              whiteSpace: "nowrap", // keep names in one line inside the chip
+              whiteSpace: "nowrap",
             }}
           >
             {skill.name}
